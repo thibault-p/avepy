@@ -1,0 +1,25 @@
+body {
+    font-family: 'PT Sans', sans-serif !important;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.quote p {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.quote .author {
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.button-primary {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    background-color: #33282c;
+    color: white;
+}
