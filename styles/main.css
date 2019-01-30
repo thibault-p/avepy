@@ -1,19 +1,59 @@
 body {
-    font-family: 'PT Sans', sans-serif !important;
+    font-family: 'Myriad Pro', 'PT Sans', sans-serif;
+    color: #33282c;
+    line-height: 1.5em;
 }
 
 h2 {
+    font-family: 'Myriad Pro Light';
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 2em;
+}
+
+.button-primary {
+    padding: 1.5em 3em;
+    font-size: 0.8em;
+}
+
+.home {
+    color: white;
+    background-image: url('../images/avepy-home-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    text-align: center;
+    margin: 4em 0 8em; 
+}
+
+.pure-g [class*=pure-u] {
+    font-family: 'Myriad Pro', 'PT Sans', sans-serif;
+}
+
+.content {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.quote {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
 }
 
 .quote p {
     font-size: 2em;
+    line-height: 1.2em;
     font-weight: lighter;
+    margin-bottom: 0.5em;
 }
 
 .quote .author {
-    font-size: 0.7em;
+    margin-top: 0;
+    font-size: 1em;
     text-align: right;
 }
 
@@ -22,4 +62,54 @@ h2 {
     text-transform: uppercase;
     background-color: #33282c;
     color: white;
+}
+
+.section-2 h3 {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.section-2 p {
+    margin-top: 0;
+}
+
+.section-2 ul{
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.section-2 li {
+    margin-bottom: 0.6em;
+    padding-left: 0;
+}
+
+.section-3 {
+    color: white;
+    background-image: url('../images/avepy-home-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.section-3 p {
+    font-style: italic;
+}
+
+.section-5 {
+    background-image: url('../images/avepy-contact-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+.credits {
+    letter-spacing: 2px;
+    font-size: 0.7em;
+}
+
+footer a{
+    color: #33282c;
+    text-transform: uppercase;
 }
