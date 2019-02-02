@@ -1,6 +1,6 @@
 body {
     font-family: 'Myriad Pro', 'PT Sans', sans-serif;
-    color: #33282c;
+    color: #373737;
     line-height: 1.5em;
 }
 
@@ -22,16 +22,39 @@ h2 {
     background-image: url('../images/avepy-home-background.jpg');
     background-repeat: no-repeat;
     background-size: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.logo {
+    margin: auto;
 }
 
 .menu {
     text-align: center;
     margin: 4em 0 8em; 
+    vertical-align: center;
+}
+
+.menu-item {
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex; 
+}
+
+.menu-item a, .menu-item a:hover, .menu-item a:visited {
+    text-align: center;
+    margin: auto;
+    font-size: 1.1em;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .pure-g [class*=pure-u] {
     font-family: 'Myriad Pro', 'PT Sans', sans-serif;
+
 }
 
 .content {
@@ -64,6 +87,18 @@ h2 {
     color: white;
 }
 
+.section-1 {
+    background-image: url('../images/avepy-part1-background.jpg');
+    background-repeat: no-repeat;
+    background-color: #f5f6f8;
+}
+
+.section-2 {
+    background-image: url('../images/avepy-part2-background.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+}
+
 .section-2 h3 {
     font-style: italic;
     margin-bottom: 0;
@@ -85,23 +120,56 @@ h2 {
 
 .section-3 {
     color: white;
-    background-image: url('../images/avepy-home-background.jpg');
+    background-image: url('../images/avepy-part3-background.jpg');
     background-repeat: no-repeat;
     background-size: 100vw;
+    font-size: 1.2em;
 }
 
 .section-3 p {
     font-style: italic;
 }
 
+.section-4 {
+    background-color: #f5f6f7;
+}
+
 .section-5 {
     background-image: url('../images/avepy-contact-background.jpg');
     background-repeat: no-repeat;
     background-size: 100vw;
+    min-height: 40em;
+}
+
+.section-5 h2 {
+    color:white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.contact-sheet {
+    padding: 2em;
+    font-size: 1.2em;
+}
+
+.detail {
+    overflow: hidden;
+    -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+    max-height: 0;
+}
+
+.detail.more {    
+    max-height:9000em;
+}
+
+.button-show-detail.more {
+    display: none;
 }
 
 footer {
-    margin-top: 1em;
+    margin-top: 5em;
 }
 
 .credits {
@@ -110,6 +178,6 @@ footer {
 }
 
 footer a{
-    color: #33282c;
+    color: #373737;
     text-transform: uppercase;
 }
