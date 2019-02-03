@@ -12,6 +12,26 @@ h2 {
     margin-bottom: 2em;
 }
 
+#gotoTop {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 9000;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.8s;
+	-moz-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+#gotoTop.visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.8s;
+	-moz-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
 .button-primary {
     padding: 1.5em 3em;
     font-size: 0.8em;
@@ -55,6 +75,16 @@ h2 {
 .pure-g [class*=pure-u] {
     font-family: 'Myriad Pro', 'PT Sans', sans-serif;
 
+}
+
+a.inline-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #373737;
+}
+
+a.inline-link:hover {
+    text-decoration: underline;
 }
 
 .content {
@@ -108,9 +138,10 @@ h2 {
     margin-top: 0;
 }
 
-.section-2 ul{
+ul{
     font-weight: bold;
     padding-left: 1em;
+    margin-top: 0em;
 }
 
 .section-2 li {

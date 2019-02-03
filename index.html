@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div id="gotoTop">
+        <a href="">Top</a>
+    </div>
     <a name="section-1"></a>
     <section class="pure-g home">
         <div class="menu pure-u-1-1">
@@ -89,12 +92,18 @@
                     prendre de la distance vis-à-vis de nos raisonnements et des buts que nous nous fixons pour aller
                     mieux, pas simplement pour se sentir mieux.
                 </p>
-                <p>
-                    Pour aller plus loin : <br />
-                    <a href="http://www.psychologies.com/Moi/Se-connaitre/Comportement/Articles-et-Dossiers/La-PCER-a-l-assaut-de-nos-fausses-croyances">Psycologie.com
-                        - La PCER à l’assaut de nos fausses croyances</a><br />
-                    <a href="http://albertellis.org/">The Albert Ellis Institute</a>
-                </p>
+                <div>
+                    Pour aller plus loin :
+                    <ul>
+                        <li>
+                            <a class="inline-link" href="http://www.psychologies.com/Moi/Se-connaitre/Comportement/Articles-et-Dossiers/La-PCER-a-l-assaut-de-nos-fausses-croyances">Psycologie.com
+                                - La PCER à l’assaut de nos fausses croyances</a>
+                        </li>
+                        <li>
+                            <a class="inline-link" href="http://albertellis.org/">The Albert Ellis Institute</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </div>
@@ -135,7 +144,8 @@
                 <li>Déterminer la part du rationnel et de l’irrationnel.</li>
                 <li>Découvrir progressivement l’ensemble des croyances et des valeurs qui agitent et animent nos
                     dialogues intérieurs et qui la plupart du temps suralimentent nos réactions émotionnelles et nous
-                    fragilisent.</li>
+                    fragilisent.
+                </li>
 
             </ul>
         </div>
@@ -164,7 +174,7 @@
         <div class="pure-u-3-24"></div>
 
         <div class="pure-u-6-24">
-            <img class="pure-img" src="images/avepy-portrait.jpg" />
+            <img class="pure-img" src="./images/avepy-portrait.jpg" />
         </div>
 
         <div class="pure-u-1-24"></div>
@@ -204,7 +214,7 @@
                     d’Elève en Situation de Handicap depuis avril 2018. Parallèlement, j’ai suivi durant deux ans, une
                     formation de coach basée sur la PCER ou Psychologie-Cognitive-Emotivo-Rationnelle. En effet, en
                     proie à des problèmes émotionnels bloquants en lien avec mon histoire de vie, j’ai cherché de
-                    l’aide et ai rencontré Cyril Malka via son site internet (<a href="https://malka.fr">www.malka.fr</a>).
+                    l’aide et ai rencontré Cyril Malka via son site internet (<a class="inline-link" href="https://malka.fr">www.malka.fr</a>).
                     Après seulement quatre mois d’accompagnement durant lesquels nous avons travaillé ensemble, durant
                     lesquels j’ai pleuré mais également beaucoup ri (l’humour ayant toujours eu malgré tout une place
                     centrale dans ma vie), j’ai accepté sa proposition de formation. Aider à mon tour, comme je l’ai
@@ -234,7 +244,7 @@
                 <div class="pure-u-8-24 contact-sheet">
                     <h2>Me contacter</h2>
                     <p>Pierre-Yves Piron</p>
-                    <p><a href="mailto:contact@avepy.fr">contact@avepy.fr</a></p>
+                    <p><a class="inline-link" href="mailto:contact@avepy.fr">contact@avepy.fr</a></p>
                     <p>02 98 12 34 56</p>
                 </div>
             </div>
@@ -257,7 +267,19 @@
 
             const classes = element.className.split(' ');
             if (classes.indexOf(className) === -1) {
-                element.className += ' ' + className;
+                classes.push(className);
+                element.className = classes.join(' ').trim();
+            }
+        }
+
+        function removeClass(element, className) {
+
+            const classes = element.className.split();
+            const idx = classes.indexOf(className);
+
+            if (idx !== -1) {
+                classes.splice(idx, 1);
+                element.className = classes.join(' ').trim();
             }
         }
 
@@ -281,6 +303,27 @@
 
             return false;
         }
+
+        function getYScroll() {
+            const doc = document.documentElement;
+            return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        }
+
+        document.addEventListener('scroll', () => {
+            const scrollY = getYScroll();
+
+            const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+            const element = document.getElementById('gotoTop');
+            const className = 'visible';
+
+            if (scrollY < viewportHeight) {
+                removeClass(element, className);
+            } else {
+                addClass(element, className);
+            }
+        });
+
     </script>
 </body>
 
