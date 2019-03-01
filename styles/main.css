@@ -24,6 +24,12 @@ h2 {
     transition: opacity 0.8s;
 }
 
+#gotoTop a, #gotoTop a:visited, #gotoTop a:hover {
+    color: #373737;
+    text-decoration: none;
+} 
+
+
 #gotoTop.visible {
     visibility: visible;
     opacity: 1;
@@ -43,9 +49,11 @@ h2 {
 
 .home {
     color: white;
-    background-image: url('../images/avepy-home-background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    background: url('../images/avepy-home-background.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -67,6 +75,10 @@ h2 {
     display: flex; 
 }
 
+.menu-item a {
+    font-size: 1.1em;
+}
+
 .menu-item a, .menu-item a:hover, .menu-item a:visited {
     text-align: center;
     margin: auto;
@@ -75,6 +87,8 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
 }
+
+
 
 .pure-g [class*=pure-u] {
     font-family: 'Myriad Pro', 'PT Sans', sans-serif;
@@ -154,9 +168,11 @@ ul{
 
 .section-3 {
     color: white;
-    background-image: url('../images/avepy-part3-background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    background: url('../images/avepy-part3-background.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-size: 1.2em;
 }
 
@@ -169,9 +185,8 @@ ul{
 }
 
 .section-5 {
-    background-image: url('../images/avepy-contact-background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    background: url('../images/avepy-contact-background.jpg') no-repeat center center;
+    background-size: cover;
     min-height: 40em;
 }
 
@@ -222,4 +237,26 @@ footer {
 footer a{
     color: #373737;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 48em) {
+    .menu-item{
+        display: none;
+    }
+
+    .menu {
+        margin: 20vh auto 20vh; 
+    }
+
+    .portrait {
+        display: none;
+    }
+
+    .quote p {
+        font-size: 1.1em;
+    }
+
+    .button-show-detail {
+        text-align: center;
+    }
 }
