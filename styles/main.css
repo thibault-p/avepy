@@ -5,7 +5,7 @@ body {
 }
 
 h2 {
-    font-family: 'Myriad Pro Light';
+    font-family: 'Myriad Pro Light', 'PT Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 3px;
@@ -21,7 +21,7 @@ h2 {
     opacity: 0;
     -webkit-transition: opacity 0.8s;
 	-moz-transition: opacity 0.8s;
-	transition: opacity 0.8s;
+    transition: opacity 0.8s;
 }
 
 #gotoTop.visible {
@@ -30,6 +30,10 @@ h2 {
     -webkit-transition: opacity 0.8s;
 	-moz-transition: opacity 0.8s;
 	transition: opacity 0.8s;
+}
+
+#gotoTop a, #gotoTop a:visited {
+    color: #373737;
 }
 
 .button-primary {
@@ -74,7 +78,6 @@ h2 {
 
 .pure-g [class*=pure-u] {
     font-family: 'Myriad Pro', 'PT Sans', sans-serif;
-
 }
 
 a.inline-link {
@@ -111,7 +114,7 @@ a.inline-link:hover {
 }
 
 .button-primary {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Myriad Pro', 'PT Sans', sans-serif;
     text-transform: uppercase;
     background-color: #33282c;
     color: white;
@@ -181,6 +184,14 @@ ul{
 .contact-sheet {
     padding: 2em;
     font-size: 1.2em;
+}
+
+.contact h2 {
+    color: #33282c;
+}
+
+.pay-info {
+    margin-top: 2.5em;
 }
 
 .detail {
