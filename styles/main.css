@@ -239,6 +239,10 @@ footer a{
     text-transform: uppercase;
 }
 
+.portrait {
+    justify-content: center;
+}
+
 @media screen and (max-width: 48em) {
     .menu-item{
         display: none;
@@ -246,10 +250,6 @@ footer a{
 
     .menu {
         margin: 20vh auto 20vh; 
-    }
-
-    .portrait {
-        display: none;
     }
 
     .quote p {
